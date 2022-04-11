@@ -27,6 +27,7 @@ func Init() {
 	model.Database(path)
 }
 
+
 func LoadMysqlData(file *ini.File) {
 	Db = file.Section("mysql").Key("Db").String()
 	DbHost = file.Section("mysql").Key("DbHost").String()

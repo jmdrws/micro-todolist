@@ -15,6 +15,7 @@ var DB *gorm.DB
 // Database 在中间件中初始化mysql链接
 func Database(connString string) {
 	db, err := gorm.Open("mysql", connString)
+	// Error
 	if err != nil {
 		panic(err)
 	}
@@ -22,7 +23,6 @@ func Database(connString string) {
 	if gin.Mode() == "release" {
 		db.LogMode(false)
 	}
-
 	//默认不加复数
 	db.SingularTable(true)
 	//设置连接池
@@ -32,6 +32,6 @@ func Database(connString string) {
 	db.DB().SetMaxOpenConns(100)
 	//超时
 	db.DB().SetConnMaxLifetime(time.Second * 30)
+
 	DB = db
-	migration()
 }

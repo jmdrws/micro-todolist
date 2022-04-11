@@ -1,6 +1,6 @@
 syntax="proto3";
 package service;
-import "userModels.proto";
+import "userModels.protos";
 option go_package ="./;protos";
 
 message UserRequest{

@@ -4,15 +4,15 @@
 package service
 
 import (
-	fmt "fmt"
-	proto "github.com/golang/protobuf/proto"
-	math "math"
+	"fmt"
+	"github.com/golang/protobuf/proto"
+	"math"
 )
 
 import (
-	context "context"
-	client "github.com/micro/go-micro/v2/client"
-	server "github.com/micro/go-micro/v2/server"
+	"context"
+	"github.com/micro/go-micro/v2/client"
+	"github.com/micro/go-micro/v2/server"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -21,10 +21,10 @@ var _ = fmt.Errorf
 var _ = math.Inf
 
 // This is a compile-time assertion to ensure that this generated file
-// is compatible with the protos package it is being compiled against.
+// is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
-// protos package needs to be updated.
-const _ = proto.ProtoPackageIsVersion3 // please upgrade the protos package
+// proto package needs to be updated.
+const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
